@@ -18,25 +18,13 @@ cd python_flask_demo
 - Substitute it with your MySQL details. (needed for Example 6 only)
 - Open VSCode and open flask_demo folder.
 
-## Example 0
-
-```
-poetry run python api_demo/flask_00_itempotency_demo.py
-```
-
-```
-curl -X GET http://127.0.0.1:5000/item/1 
-
-curl -X GET http://127.0.0.1:5000/item/10
-
-curl -X PUT -H "Content-Type: application/json" -d '{"name": "Updated item 3", "description": "This is the updated item 3"}' http://127.0.0.1:5000/item/3
-
-curl -X DELETE http://127.0.0.1:5000/item/3
-```
-
 ## Example 1
 
 ```
+uv run python api_demo/flask_01_simple_app.py
+
+or
+
 poetry run python api_demo/flask_01_simple_app.py
 ```
 
@@ -59,6 +47,10 @@ poetry run python -m unittest tests/test_01.py
 ## Example 2
 
 ```
+uv run python api_demo/flask_02_crud_app.py
+
+or
+
 poetry run python api_demo/flask_02_crud_app.py
 ```
 
@@ -83,6 +75,10 @@ curl -X DELETE  http://127.0.0.1:5002/items/3
 ### Unit Test
 
 ```
+uv run python -m unittest tests/test_02.py
+
+or
+
 poetry run python -m unittest tests/test_02.py
 ```
 
@@ -90,6 +86,10 @@ poetry run python -m unittest tests/test_02.py
 ## Example 3
 
 ```
+uv run python api_demo/flask_02_basic_auth_app.py
+
+or
+
 poetry run python api_demo/flask_03_basic_auth_app.py
 ```
 
@@ -110,6 +110,10 @@ poetry run python -m unittest tests/test_03.py
 ## Example 4
 
 ```
+uv run python api_demo/flask_04_jwt_auth_app.py
+
+or
+
 poetry run python api_demo/flask_04_jwt_auth_app.py
 ```
 
@@ -130,6 +134,10 @@ curl -X GET -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmc
 ## Example 5
 
 ```
+uv run python api_demo/flask_05_jwt_auth_swagger_app.py
+
+or
+
 poetry run python api_demo/flask_05_jwt_auth_swagger_app.py
 ```
 ### Browser
@@ -145,6 +153,30 @@ Get sakila-data-02.sql and sakila-schema-01.sql from this.
 https://github.com/gchandra10/sakila_schema_data_mysql
 
 ```
+uv run python api_demo/flask_06_mysql_app.py
+
+or
+
 poetry run python api_demo/flask_06_mysql_app.py
+
 ```
 
+## Example 7
+
+```
+uv run python api_demo/flask_07_itempotency_demo.py
+
+or
+
+poetry run python api_demo/flask_07_itempotency_demo.py
+```
+
+```
+curl -X GET http://127.0.0.1:5000/item/1 
+
+curl -X GET http://127.0.0.1:5000/item/10
+
+curl -X PUT -H "Content-Type: application/json" -d '{"name": "Updated item 3", "description": "This is the updated item 3"}' http://127.0.0.1:5000/item/3
+
+curl -X DELETE http://127.0.0.1:5000/item/3
+```
